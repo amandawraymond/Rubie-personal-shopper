@@ -5,16 +5,19 @@
 .navbar {
   font-size: 20px;
   font-family: 'Orbitron', sans-serif;
-  background-color: black; 
+  background-color: #27B0BA; 
   background-image: none;
   background-repeat: no-repeat;
   opacity: 0.75;
   border-radius: 0px;
   color: white;
+  padding-top: 2px;
+
 }
 .navbar-left {
   padding-left: 20px;
 }
+
 .suggestions {
   background: #3275C1;
   margin: 0px;
@@ -24,7 +27,10 @@
   position: absolute;
   
 }
-.price {
+.location {
+ background-color: #4AB9C1;
+ color: white;
+ font-weight: bold;
 
 }
 .colors {
