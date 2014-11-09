@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   match '/suggestions', to: 'static_pages#suggestions', via: 'get'
   match '/outfit', to: 'static_pages#outfit', via: 'get'
   match '/map', to: 'static_pages#map', via: 'get'
-   match '/map', to: 'static_pages#dress', via: 'get'
+  match '/dress', to: 'static_pages#dress', via: 'get'
 
 
 
