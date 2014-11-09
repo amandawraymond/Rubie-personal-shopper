@@ -1,43 +1,320 @@
-<nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <%= link_to 'LVE', root_path, class: "navbar-brand" %>
-    </div>
+@import "bootstrap";
+@import url(//fonts.googleapis.com/css?family=Syncopate|Oswald|Orbitron);
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <% if signed_in? %>
-          <li><%= link_to "Concerts", new_concert_path %></li>
-          <li><%= link_to "Artists", new_artist_path %></li>
-          <li class="visible-xs"><%= link_to "Contact", contact_path %></li>
-          <li class="visible-xs"><%= link_to "About", about_path %></li>
-          <li class="visible-xs"><%= link_to "Help", help_path %></li>
-        <% end %>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <% if signed_in? %>
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.name %> <span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li><%= link_to "My Concerts", myconcerts_path %></li>
-              <li><%= link_to "My Artist", myartists_path %></li>
-              <li class="divider"></li>
-              <li><%= link_to "Sign Out", signout_path, method: "delete" %></li>
-            </ul>
-          <% else %>
-            <li><%= link_to "Sign Up", signup_path %></li>
-            <li><%= link_to "Sign In", signin_path %></li>
-          <% end %>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+
+.navbar {
+  font-size: 20px;
+  font-family: 'Orbitron', sans-serif;
+  background-color: black; 
+  background-image: none;
+  background-repeat: no-repeat;
+  opacity: 0.75;
+  border-radius: 0px;
+  color: white;
+}
+.navbar-left {
+  padding-left: 20px;
+}
+.suggestions {
+  background: #3275C1;
+  margin: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 50px;
+  position: absolute;
+  
+}
+.price {
+
+}
+.colors {
+ 
+}
+.item {
+  font-size: 50px;
+
+}
+.center{
+  position: center;
+}
+.jacket {
+  padding-bottom: 20px;
+  clear: both;
+}
+body {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  font-family: 'Syncopate', sans-serif;
+}
+#home {
+  font-size: 90px;
+  padding: 10px;
+}
+#header-home {
+  padding-left: 5em;
+  padding-top: 3em;
+  font-size: 1.2em;
+}
+#welcome {
+  padding-left: 1em;
+  font-size: 3em;
+}
+
+
+/*help page*/
+#bg-static {
+  position: fixed; 
+  top: 0; 
+  left: 0;  
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+#help {
+  padding-left: 9em;
+  padding-top: 3em;
+}
+#title-help {
+  font-family: 'Syncopate', sans-serif;  
+  font-size: 3em;
+}
+#header-help {
+  font-size: 2em;
+  font-family: 'Orbitron', sans-serif;
+}
+#header-help2 {
+  font-size: 1em;
+  font-family: 'Orbitron', sans-serif;
+}
+/*contact page*/
+
+.title-static {
+  font-family: 'Orbitron', sans-serif;  
+  font-size: 30px;
+}
+.header-static {
+  padding-left: 10em;
+  padding-top: 3em;
+  font-family: 'Syncopate', sans-serif;
+}
+.header-static2 {
+  font-size: 15px;
+  font-family: 'Orbitron', sans-serif; 
+}
+/*about page*/
+
+#title-about {
+  margin-left: 50px;
+  position: fixed;
+  padding: 60px;
+  font-family: 'Orbitron', sans-serif;  
+  font-size: 40px;
+}
+.header-about {
+ font-size: 20px;
+ font-family: 'Syncopate', sans-serif;
+
+}
+/*signin page*/
+
+
+.jumbotron.text-center {
+  position:fixed;
+  width: 50%;
+  margin-top: 0px;
+  margin-left: -80px;
+  margin-right: auto;
+  font-size: 16px;
+  height: 100%;
+  background: transparent;
+  size: 20px;
+  color: black;
+  font-family: 'Syncopate', sans-serif;
+}
+.user-form {
+  font-family: 'Syncopate', sans-serif; 
+  color: black;
+}
+#signin-title {
+  font-family: 'Orbitron', sans-serif;
+  padding-left: 100px;
+  color: black;
+}
+.button {
+  padding-left: 100px;
+
+}
+/*signup*/
+
+
+.jumbotron.text-center {
+  width: 50%;
+  font-size: 16px;
+  height: 100%;
+  background: transparent;
+  size: 30px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5em;
+  margin-top: -40px;
+  text-align: center;
+  margin-left: 40px;
+}
+#signup-title {
+  margin-right: -90px;
+}
+#form-email {
+  margin-right: 45px;
+}
+#form-confirmation {
+  margin-right: 35px;
+}
+
+/*search concert*/
+
+#bg-search { 
+  position: fixed; 
+  top: 0; 
+  left: 0;  
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+.jumbotron.search {
+ width: 100%;
+  padding-top: 7em;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1em;
+  height: 100%;
+  background: transparent;
+  text-align:center;
+  size: 5em;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5em;
+}
+#concert-search-title{
+  text-align: center;
+  color: #E9E9E9;
+}
+#search-params {
+  text-align: center;
+}
+.form-text {
+  color: #E9E9E9;
+  font-size: 2em;
+  text-align: center;
+}
+/*artist search*/
+
+#bg-search2 {
+  position: fixed; 
+  top: 0; 
+  left: 0;  
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+.jumbotron.search2 {
+  width: 100%;
+  padding-top: 7em;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1em;
+  height: 100%;
+  background: transparent;
+  text-align:center;
+  size: 5em;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 20px;
+}
+#searchtag {
+  color: black;
+  font-size: 100px;
+  text-align: center;
+}
+#searchtag2 { 
+  text-align: center;
+}
+/*user page*/
+
+#bg-user {
+  position: fixed; 
+  top: 0; 
+  left: 0;  
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+.header {
+  position: fixed;
+  color: white;
+  font-size: 50px;
+  font-family: 'Syncopate', sans-serif;
+  padding-top: 20px;
+}
+/*index concerts*/
+#bg-results {
+  position: fixed; 
+  top: 0; 
+  left: 0;  
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+.results {
+  width: 60%;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16px;
+  height: 60%;
+  background: transparent;
+  size: 50px;
+  font-family: 'Syncopate', sans-serif;
+  font-size: 20px;
+  color: white;
+  font-weight: 800px;
+  text-align: center;
+}
+
+/*artist search results*/
+
+#bg-list {
+  position: fixed; 
+  top: 0; 
+  left: 0;  
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+#saved-results {
+  text-align: center;
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16px;
+  background: transparent;
+  size: 50px;
+  font-family: 'Syncopate', sans-serif;
+  font-size: 15px;
+  color: white;
+  font-weight: 500px;
+}
+
+.header1 {
+  color: white;
+  font-size: 50px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.concert-name {
+  font-size: 100px;
+}
+
+
+/* Test */
+.green {
+  color: green;
+}
