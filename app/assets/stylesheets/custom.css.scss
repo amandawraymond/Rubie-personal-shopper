@@ -1,6 +1,6 @@
 @import "bootstrap";
 
-@import url(http://fonts.googleapis.com/css?family=Delius+Unicase);
+@import url(//fonts.googleapis.com/css?family=Delius+Unicase);
 
 .navbar {
   font-size: 20px;
@@ -17,7 +17,10 @@
 .navbar-left {
   padding-left: 20px;
 }
-
+.jumbotron {
+  position: fixed;
+  background-color: rgba(0,0,0,0);
+}
 .suggestions {
   background: #3275C1;
   margin: 0px;
@@ -50,6 +53,7 @@
 }
 .item {
   font-size: 60px;
+ 
 }
 .center{
   position: center;
