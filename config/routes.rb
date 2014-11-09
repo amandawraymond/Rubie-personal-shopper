@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   match '/details', to: 'static_pages#details', via: 'get'
   match '/suggestions', to: 'static_pages#suggestions', via: 'get'
   match '/outfit', to: 'static_pages#outfit', via: 'get'
+  match '/map', to: 'static_pages#map', via: 'get'
 
 
 

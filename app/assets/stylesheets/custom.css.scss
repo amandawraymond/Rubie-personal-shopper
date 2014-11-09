@@ -1,10 +1,10 @@
 @import "bootstrap";
-@import url(//fonts.googleapis.com/css?family=Syncopate|Oswald|Orbitron);
 
+@import url(http://fonts.googleapis.com/css?family=Delius+Unicase);
 
 .navbar {
   font-size: 20px;
-  font-family: 'Orbitron', sans-serif;
+ font-family: 'Delius Unicase', cursive;
   background-color: #27B0BA; 
   background-image: none;
   background-repeat: no-repeat;
@@ -25,19 +25,20 @@
   padding-right: 20px;
   font-size: 50px;
   position: absolute;
-  
+   
 }
 .location {
  background-color: #4AB9C1;
  color: white;
  font-weight: bold;
+ font-size: 30px;
 
 }
 .colors {
  
 }
 .item {
-  font-size: 50px;
+  font-size: 60px;
 
 }
 .center{
@@ -50,7 +51,7 @@
 body {
   margin-top: 60px;
   margin-bottom: 60px;
-  font-family: 'Syncopate', sans-serif;
+ font-family: 'Delius Unicase', cursive;
 }
 #home {
   font-size: 90px;
